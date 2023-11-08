@@ -5,10 +5,13 @@
 class Branch
 {
 public:
-    Branch(sf::Sprite, sf::Vector2f);
-    Branch(sf::Sprite, float x, float y);
+    Branch(sf::Texture&, sf::Vector2f);
+    Branch(sf::Texture&, float x, float y);
     void flip();
-    sf::Sprite getSprite();
+    sf::Sprite getSprite()
+    {
+        return sprite;
+    }
 private:
     sf::Sprite sprite;
 };

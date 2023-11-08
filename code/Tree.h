@@ -7,8 +7,8 @@
 class Tree
 {
 public:
-    Tree(sf::Texture texture, sf::Vector2f);
-    Tree(sf::Texture texture, float x, float y);
+    Tree(sf::Texture& texture, sf::Vector2f);
+    Tree(sf::Texture& texture, float x, float y);
     void addBranch(Branch);
     void draw(sf::RenderWindow& window);
 private:

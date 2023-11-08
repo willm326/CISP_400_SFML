@@ -1,7 +1,4 @@
 ﻿  Timber.cpp
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(38,9): error C2065: 'window': undeclared identifier
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(49,4): error C2065: 'window': undeclared identifier
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(66,3): error C2065: 'window': undeclared identifier
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(69,3): error C2065: 'window': undeclared identifier
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(69,15): error C2065: 'spriteBackground': undeclared identifier
-C:\Users\lyn\source\repos\Timber\code\Timber.cpp(72,3): error C2065: 'window': undeclared identifier
+  Tree.cpp
+  Generating Code...
+  Timber.vcxproj -> C:\Users\lyn\source\repos\Timber\Debug\Timber.exe

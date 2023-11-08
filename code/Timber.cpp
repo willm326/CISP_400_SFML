@@ -1,6 +1,7 @@
 // Include important C++ libraries here
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Tree.h"
 
 // Make code easier to type with "using namespace"
 using namespace sf;
@@ -28,6 +29,10 @@ int main()
 
 	// Set the spriteBackground to cover the screen
 	spriteBackground.setPosition(0, 0);
+
+	sf::Texture treeTexture;
+	treeTexture.loadFromFile("graphics/tree.png");
+	Tree tree(treeTexture, 810, 0);
 
 
 	while (window.isOpen())
@@ -62,6 +67,7 @@ int main()
 
 		// Draw our game scene here
 		window.draw(spriteBackground);
+		tree.draw(window);
 
 		// Show everything we just drew
 		window.display();
