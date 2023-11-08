@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Tree.h"
+#include "Movable.h"
 
 // Make code easier to type with "using namespace"
 using namespace sf;
@@ -33,6 +34,14 @@ int main()
 	sf::Texture treeTexture;
 	treeTexture.loadFromFile("graphics/tree.png");
 	Tree tree(treeTexture, 810, 0);
+
+	sf::Texture beeTexture;
+	beeTexture.loadFromFile("graphics/bee.png");
+	Movable bee(beeTexture, Vector2f(0, 800));
+
+	sf::Texture cloudTexture;
+	cloudTexture.loadFromFile("graphics/cloud.png");
+	vector<Movable> clouds = { Movable(cloudTexture, Vector2f(0, 0)), Movable(cloudTexture, Vector2f(0, 250)), Movable(cloudTexture, Vector2f(0, 500)) };
 
 
 	while (window.isOpen())
@@ -68,6 +77,11 @@ int main()
 		// Draw our game scene here
 		window.draw(spriteBackground);
 		tree.draw(window);
+		window.draw(bee);
+		for (Movable cloud : clouds)
+		{
+			window.draw(cloud);
+		}
 
 		// Show everything we just drew
 		window.display();
